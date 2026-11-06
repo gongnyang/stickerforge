@@ -6,7 +6,9 @@
 
 Give it one character image and get hundreds of print-ready transparent PNG stickers. It is a skill that runs in both Codex and Claude Code.
 
-<!-- demo -->
+[![Watch the 30-second demo](docs/assets/demo-poster.jpg)](docs/assets/demo.mp4)
+
+[Watch the 30-second demo](docs/assets/demo.mp4)
 
 ## Install
 

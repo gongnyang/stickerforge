@@ -6,7 +6,9 @@
 
 캐릭터 이미지 한 장을 넣으면 인쇄용 투명 PNG 스티커 수백 장이 나옵니다. Codex와 Claude Code 양쪽에서 쓰는 스킬입니다.
 
-<!-- demo -->
+[![30초 데모 영상 보기](docs/assets/demo-poster.jpg)](docs/assets/demo.mp4)
+
+[30초 데모 영상 보기](docs/assets/demo.mp4)
 
 ## 설치
 
