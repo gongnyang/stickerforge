@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "stickerforge spec.json",
+  "type": "object",
+  "required": [
+    "name",
+    "ref",
+    "style",
+    "concepts"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "납품 파일 접두어"
+    },
+    "ref": {
+      "type": "string",
+      "description": "작업 폴더 기준 원본 참조 이미지 경로. 생성물을 참조로 쓰지 않는다"
+    },
+    "style": {
+      "type": "string",
+      "description": "S0 에서 고정하는 그림체 문구"
+    },
+    "character": {
+      "type": "string",
+      "description": "캐릭터 특징 한 줄"
+    },
+    "transparent": {
+      "type": "boolean",
+      "default": true
+    },
+    "min_px": {
+      "type": "integer",
+      "default": 1024,
+      "description": "게이트 최소 변 길이"
+    },
+    "provider": {
+      "enum": [
+        "auto",
+        "codex",
+        "openai",
+        "gemini"
+      ],
+      "default": "auto"
+    },
+    "parallel": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10,
+      "default": 8
+    },
+    "trial": {
+      "type": "string",
+      "description": "S2 시험 생성에 반드시 포함할 컨셉 id. 없으면 pilot_count 선택만 따른다"
+    },
+    "pilot_count": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 6,
+      "description": "S2 시험 생성 장수. 서로 다른 컨셉을 이만큼 뽑고, 컨셉 수보다 크면 컨셉 수"
+    },
+    "dup_threshold": {
+      "type": "number",
+      "default": 0.8,
+      "description": "S1 컨셉 중복 판정(토큰 자카드)"
+    },
+    "sheet_cols": {
+      "type": "integer",
+      "default": 6
+    },
+    "codex": {
+      "type": "object",
+      "properties": {
+        "model": {
+          "type": "string",
+          "default": "gpt-6.1-terra"
+        },
+        "effort": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "default": "medium"
+        },
+        "timeout": {
+          "type": "integer",
+          "default": 420
+        }
+      }
+    },
+    "openai": {
+      "type": "object",
+      "properties": {
+        "model": {
+          "type": "string",
+          "default": "gpt-image-2"
+        },
+        "size": {
+          "type": "string",
+          "default": "1024x1024"
+        },
+        "timeout": {
+          "type": "integer"
+        }
+      }
+    },
+    "gemini": {
+      "type": "object",
+      "properties": {
+        "model": {
+          "type": "string",
+          "default": "gemini-2.5-flash-image"
+        },
+        "timeout": {
+          "type": "integer"
+        }
+      }
+    },
+    "concepts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "prompt"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]+$"
+          },
+          "title": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string",
+            "description": "자세와 상황만 쓴다. 그림체·캐릭터는 style, character 가 붙는다"
+          }
+        }
+      }
+    },
+    "gates": {
+      "type": "object",
+      "description": "게이트별 옵션. 키는 게이트 이름, 값은 CLI 인자 배열",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

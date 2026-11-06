@@ -1,0 +1,6 @@
+interface:
+  display_name: "stickerforge"
+  short_description: "Transparent print-ready sticker packs from one image"
+  default_prompt: "Use $stickerforge to turn my character image into a sticker pack. Start with intake and style choice."
+policy:
+  allow_implicit_invocation: true

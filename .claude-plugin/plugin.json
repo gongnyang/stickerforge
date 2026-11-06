@@ -1,0 +1,10 @@
+{
+  "name": "stickerforge",
+  "description": "Turns one character image into hundreds of print-ready transparent PNG stickers, with gates for alpha, fake checkerboard backgrounds and duplicates.",
+  "version": "0.1.0",
+  "author": { "name": "kongnyang" },
+  "homepage": "https://github.com/gongnyang/stickerforge",
+  "repository": "https://github.com/gongnyang/stickerforge",
+  "license": "MIT",
+  "keywords": ["sticker", "image-generation", "print", "character"]
+}

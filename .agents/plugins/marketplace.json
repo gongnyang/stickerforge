@@ -1,0 +1,12 @@
+{
+  "name": "gongnyang-tools",
+  "interface": { "displayName": "gongnyang tools" },
+  "plugins": [
+    {
+      "name": "stickerforge",
+      "source": { "source": "local", "path": "./" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_USE" },
+      "category": "Design"
+    }
+  ]
+}

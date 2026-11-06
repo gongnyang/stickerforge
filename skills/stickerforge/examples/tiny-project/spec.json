@@ -1,0 +1,17 @@
+{
+  "name": "tiny",
+  "ref": "refs/gongnyang.jpg",
+  "style": "Soft hand-drawn storybook illustration, warm muted colors, thin dark brown outline, flat shading with gentle paper texture. A thick white die-cut border surrounds the subject.",
+  "character": "A grey-brown tabby cat with round black glasses, a teal hoodie and an ID card on a lanyard.",
+  "transparent": true,
+  "min_px": 1024,
+  "provider": "auto",
+  "parallel": 3,
+  "pilot_count": 1,
+  "codex": { "model": "gpt-6.1-terra", "effort": "medium", "timeout": 600 },
+  "concepts": [
+    { "id": "t001", "title": "손 흔들기", "prompt": "The cat waves one paw and smiles, standing, full body." },
+    { "id": "t002", "title": "커피 마시기", "prompt": "The cat holds a paper coffee cup with both paws, eyes half closed, content." },
+    { "id": "t003", "title": "잠든 고양이", "prompt": "The cat curled up asleep on a small laptop, tail wrapped around it." }
+  ]
+}

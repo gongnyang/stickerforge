@@ -1,0 +1,18 @@
+{
+  "name": "mypack",
+  "ref": "refs/character.png",
+  "style": "Soft hand-drawn storybook illustration, warm muted colors, thin dark brown outline, flat shading. A thick white die-cut border surrounds the subject.",
+  "character": "One line on the identifying features of the character in the reference image.",
+  "transparent": true,
+  "min_px": 1024,
+  "provider": "auto",
+  "parallel": 8,
+  "pilot_count": 6,
+  "trial": "w001",
+  "codex": { "model": "gpt-6.1-terra", "effort": "medium", "timeout": 600 },
+  "concepts": [
+    { "id": "w001", "title": "waiting for a build", "prompt": "Sitting with chin on hands, half-closed eyes, a small laptop in front." },
+    { "id": "d001", "title": "first coffee", "prompt": "Both paws around a mug, eyes closed, small smile." },
+    { "id": "r001", "title": "thanks", "prompt": "Small bow with closed happy eyes. Text: \"thanks\"." }
+  ]
+}

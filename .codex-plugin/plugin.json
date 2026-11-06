@@ -1,0 +1,21 @@
+{
+  "name": "stickerforge",
+  "version": "0.1.0",
+  "description": "Turns one character image into hundreds of print-ready transparent PNG stickers.",
+  "author": { "name": "kongnyang", "url": "https://github.com/gongnyang" },
+  "homepage": "https://github.com/gongnyang/stickerforge",
+  "repository": "https://github.com/gongnyang/stickerforge",
+  "license": "MIT",
+  "keywords": ["sticker", "image-generation", "print", "character"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "stickerforge",
+    "shortDescription": "Transparent print-ready sticker packs from one image",
+    "longDescription": "Plans concepts, checks duplicates, runs a pilot, batch-generates, gates alpha and fake checkerboard backgrounds, retries failures twice, and exports a contact sheet.",
+    "developerName": "kongnyang",
+    "category": "Design",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/gongnyang/stickerforge",
+    "defaultPrompt": ["Use $stickerforge to turn my character image into a sticker pack."]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "gongnyang-tools",
+  "owner": { "name": "kongnyang" },
+  "plugins": [
+    {
+      "name": "stickerforge",
+      "source": "./",
+      "description": "One character image in, hundreds of print-ready transparent PNG stickers out.",
+      "version": "0.1.0"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "stickerforge manifest.jsonl 한 행",
+  "description": "행 단위 추가만 한다. 같은 id 는 마지막 행이 현재 상태. id 가 _ 로 시작하면 단계·승인·경고 행.",
+  "type": "object",
+  "required": ["ts", "id", "status"],
+  "properties": {
+    "ts": { "type": "string" },
+    "id": { "type": "string", "description": "컨셉 id, _S0~_S6(단계 완료), _approve_A/B/C(사람 확인), _gates(경고)" },
+    "stage": { "type": "string" },
+    "status": { "enum": ["done", "ok", "warn", "generated", "gen_failed", "passed", "gate_failed", "exhausted"] },
+    "attempt": { "type": "integer", "description": "생성 시도 누계. 재시도 2회 상한이라 최대 3" },
+    "provider": { "type": "string" },
+    "thread_id": { "type": "string", "description": "codex 스레드 id. 이미지 회수와 cleanup 의 기준" },
+    "path": { "type": "string" },
+    "note": { "type": "string" },
+    "error": { "type": "string" }
+  }
+}
